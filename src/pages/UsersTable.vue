@@ -8,10 +8,10 @@
         :loading="loading"
       >
         <template v-slot:bottom-right>
-          <q-btn label="bobo" icon="add" color ="primary" :to="{ name: 'activityform'}"/>
+          <q-btn label="bobo" icon="add" color ="deep-orange-8" :to="{ name: 'activityform'}"/>
         </template>
         <template v-slot:bottom-left>
-          <q-btn label="loco" icon="add" color ="primary" :to="{ name: 'activityform'}"/>
+          <q-btn label="loco" icon="add" color ="deep-orange-8" :to="{ name: 'activityform'}"/>
         </template>
         <template v-slot:body-cell-actions="props">
           <td class="float-center">

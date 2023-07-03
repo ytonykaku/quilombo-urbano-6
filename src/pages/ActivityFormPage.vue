@@ -1,29 +1,33 @@
 <template>
     <q-page>
-        <q-form class="row q-col-gutter-xs justify-center" @submit="handleSubmit">
-            <q-input
+        <q-form style="padding-top: 25px;" class="row" @submit="handleSubmit">
+        <q-title style="font-size: 25px; padding-left:40%; padding-bottom: 20px; font-family:Arial; " >
+         Registrar Atividade
+        </q-title>
+        
+            <q-input 
                 label="Nome da atividade"
                 outlined
                 v-model="form.name"
-                class="col-xs-12 col-sm-12 col-md-8 col-lg-7"
+                class="col-md-6 offset-md-3"
                 :rules="recquiredRule"
             />
-            <q-input
+            <q-input class="col-md-6 offset-md-3"
                 label="Professor"
                 outlined
                 v-model="form.teacher"
-                class="col-xs-12 col-sm-12 col-md000-08 col-lg-7"
                 :rules="recquiredRule"
             />
             <q-input
                 label="Descreva a atividade sugerida"
                 outlined
                 v-model="form.description"
-                class="col-xs-12 col-sm-12 col-md-8 col-lg-7"
+                class="col-md-6 offset-md-3"
                 :rules="recquiredRule"
             />
             <q-select
-                style="width: 20%; margin-right: auto"
+          class="col-md-3 offset-md-3"
+            
                 outlined
                 standout="bg-white text-black"
                 v-model="form.activity_day"
@@ -32,10 +36,11 @@
                 :options="activity_day"
                 :rules="[(val) => !!val || 'Campo obrigatório']"
                 bg-color="white"
+               
               >
             </q-select>
             <q-select
-                style="width: 20%; margin-right: auto"
+            class="col-md-4"
                 outlined
                 standout="bg-white text-black"
                 v-model="form.activity_time"
@@ -47,7 +52,7 @@
               >
             </q-select>
             <q-select
-                style="width: 20%; margin-right: auto"
+            class="col-md-6 offset-md-3"
                 outlined
                 standout="bg-white text-black"
                 v-model="form.location"
@@ -59,25 +64,26 @@
               >
             </q-select>
             <q-select
-                style="width: 20%; margin-right: auto"
+           class="col-md-3 offset-md-3"
                 outlined
                 standout="bg-white text-black"
                 v-model="form.projecttype"
                 type="text"
-                label="Seu projeto e:"
+                label="Seu projeto é:"
                 :options="projecttype"
                 :rules="[(val) => !!val || 'Campo obrigatório']"
                 bg-color="white"
               >
             </q-select>
             <q-input
+            class="col-md-6 offset-md-3"
                 label="Quantas pessoas fazem parte do seu projeto?"
                 outlined
                 v-model="form.amountofhelpers"
-                class="col-xs-12 col-sm-12 col-md-8 col-lg-7"
                 :rules="recquiredRule"
             />
             <q-select
+            class="col-md-6 offset-md-3"
                 style="width: 20%; margin-right: auto"
                 outlined
                 standout="bg-white text-black"
@@ -90,7 +96,7 @@
               >
             </q-select>
             <q-select
-                style="width: 20%; margin-right: auto"
+            class="col-md-6 offset-md-3"
                 outlined
                 standout="bg-white text-black"
                 v-model="form.target"
@@ -101,8 +107,8 @@
                 bg-color="white"
               >
             </q-select>
-            <div>
-                <q-btn label="Salvar" color="primary" class="float-right" type="submit" />
+            <div style="margin-left: 45%; padding-top: 20px" col-md-6 offset-md-3>
+                <q-btn label="Salvar" color ="deep-orange-8" class="float-right" type="submit" />
                 <q-btn label="Cancelar" color="white" class="float-right text-black q-mr-md"
                 :to="{ name: 'activitytable'}" />
             </div>

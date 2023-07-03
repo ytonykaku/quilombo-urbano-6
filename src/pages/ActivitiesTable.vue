@@ -8,10 +8,10 @@
         :loading="loading"
       >
         <template v-slot:top-right>
-          <q-btn label="Novo" icon="add" color ="primary" :to="{ name: 'activityform'}"/>
+          <q-btn label="Registrar Atividade" icon="add" color ="deep-orange-8" :to="{ name: 'activityform'}"/>
         </template>
         <template v-slot:top-left>
-          <q-btn label="Ovo" icon="add" color ="primary" :to="{ name: 'usersigninpage'}"/>
+          <q-btn label="Usuarios" icon="add" color ="deep-orange-8" :to="{ name: 'usersigninpage'}"/>
         </template>
         <template v-slot:bottom-right>
           <q-btn label="bobo" icon="add" color ="primary" :to="{ name: 'activityform'}"/>
